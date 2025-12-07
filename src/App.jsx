@@ -1,14 +1,14 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Canvas } from "@react-three/fiber";
 import "./App.css";
+import Experience from "./components/Experience";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1 className="text-8xl">Vite + React</h1>
+      <Canvas camera={{ position: [0, 0, 4], fov: 45 }}>
+        <color  attach="background" args={["#222222"]}/>
+        <Experience />
+      </Canvas>
     </>
   );
 }
